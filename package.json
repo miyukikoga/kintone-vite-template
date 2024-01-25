@@ -1,0 +1,43 @@
+{
+  "name": "kintone-vite-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest",
+    "build": "tsc --noEmit && vite build",
+    "upload": "node uploader.js",
+    "deploy": "npm run build && npm run upload",
+    "format": "prettier --write 'src/**/*'",
+    "lint": "eslint --ext .ts src",
+    "prepare": "husky install"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@kintone/rest-api-client": "^5.0.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@cybozu/eslint-config": "^22.0.2",
+    "@kintone/customize-uploader": "^8.0.6",
+    "@kintone/dts-gen": "^8.0.4",
+    "@types/react": "^18.2.48",
+    "@types/react-dom": "^18.2.18",
+    "@typescript-eslint/eslint-plugin": "^6.19.1",
+    "@typescript-eslint/parser": "^6.19.1",
+    "eslint": "^8.56.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.33.2",
+    "husky": "^8.0.0",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.2.4",
+    "typescript": "^5.3.3",
+    "vite": "^5.0.12",
+    "vitest": "^1.2.1"
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": "prettier --write --ignore-unknown"
+  }
+}

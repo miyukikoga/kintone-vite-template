@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "module": "esnext",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "outDir": "dist/app1",
+    "declarationDir": "dist/types",
+    "declaration": true,
+    "moduleResolution": "node",
+  },
+  "files": ["node_modules/@kintone/dts-gen/kintone.d.ts"],
+  "include": ["src/**/*"],
+}

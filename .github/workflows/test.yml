@@ -1,0 +1,17 @@
+name: Kintone Test
+on:
+  workflow_call:
+  push:
+    paths-ignore:
+      - '**/*.md'
+    branches-ignore:
+      - main
+jobs:
+  test:
+    name: Test app
+    runs-on: ubuntu-latest
+    concurrency: test-group
+    steps:
+      - uses: actions/checkout@v3
+      - run: npm ci
+      - run: npm run test
