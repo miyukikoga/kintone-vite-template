@@ -6,8 +6,11 @@
   "scripts": {
     "test": "vitest",
     "build": "tsc --noEmit && vite build",
+    "upload:dev": "node uploader-dev.js",
     "upload": "node uploader.js",
-    "deploy": "npm run build && npm run upload",
+    "deploy:dev": "npm run build && npm run upload:dev",
+    "deploy:test": "npm run build && npm run upload test",
+    "deploy:prod": "npm run build && npm run upload prod",
     "format": "prettier --write 'src/**/*'",
     "lint": "eslint --ext .ts src",
     "prepare": "husky install"

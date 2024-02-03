@@ -6,6 +6,7 @@ on:
       - '**/*.md'
     branches-ignore:
       - main
+      - test
 jobs:
   test:
     name: Test app

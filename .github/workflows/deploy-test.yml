@@ -1,16 +1,17 @@
-name: Kintone Deploy to Production environment
+name: Kintone Deploy to Test environment
 on:
-  release:
-    types: [published]
+  push:
+    branches:
+      - test
 jobs:
   deploy:
     name: Deploy app
     runs-on: ubuntu-latest
-    concurrency: deploy-group
+    concurrency: test-deploy-group
     steps:
       - uses: actions/checkout@v3
       - run: npm ci
-      - run: npm run deploy-prod
+      - run: npm run deploy-test
         env:
           KINTONE_BASE_URL: ${{ secrets.KINTONE_BASE_URL }}
           KINTONE_USER: ${{ secrets.KINTONE_USER }}
