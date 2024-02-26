@@ -7,12 +7,10 @@ export default defineConfig({
     rollupOptions: {
       input: {
         app1: `src/apps/app1/index.ts`,
-        app2: `src/apps/app2/index.ts`,
       },
       output: {
-        manualChunks: () => 'everything',
         dir: 'dist',
-        entryFileNames: '[name].js',
+        entryFileNames: `[name].js`,
         inlineDynamicImports: false,
       },
     },

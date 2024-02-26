@@ -5,12 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "vitest",
-    "build": "tsc --noEmit && vite build",
-    "upload:dev": "node uploader-dev.js",
-    "upload": "node uploader.js",
-    "deploy:dev": "npm run build && npm run upload:dev",
-    "deploy:test": "npm run build && npm run upload test",
-    "deploy:prod": "npm run build && npm run upload prod",
+    "deploy:dev": "node build-uploader-dev.js",
+    "deploy:test": "node build-uploader.js test",
+    "deploy:prod": "node build-uploader.js prod",
     "format": "prettier --write 'src/**/*'",
     "lint": "eslint --ext .ts src",
     "prepare": "husky install"

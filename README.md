@@ -22,6 +22,20 @@ $ direnv allow
 
 ## 開発
 
+### 開発環境へのデプロイ
+
+ビルドとアップロードを行います。
+
+```
+$ npm run deploy:dev アプリ名(e.g.,app1)
+```
+
+ビルドだけ行いたい場合
+
+```
+$ npx vite build --config src/apps/アプリ名(e.g.,app1)/vite.config.mts --mode development
+```
+
 ### 検証環境へのデプロイ
 
 Actions で test ブランチへマージ時に自動デプロイするので基本的に手動で実行することはありません。
