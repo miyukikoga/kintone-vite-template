@@ -10,6 +10,7 @@ export default defineConfig({
         app2: `src/apps/app2/index.ts`,
       },
       output: {
+        manualChunks: () => 'everything',
         dir: 'dist',
         entryFileNames: '[name].js',
         inlineDynamicImports: false,
