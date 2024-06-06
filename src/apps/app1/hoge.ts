@@ -1,4 +1,8 @@
-export const hogehoge = (): string => {
+export const hogehoge = () => {
   console.log('hogehoge');
-  return 'hogehoge';
+  return hogehoge;
+};
+
+export const clickEvent = () => {
+  console.log('clickEvent');
 };
