@@ -1,6 +1,6 @@
 import { createRoot } from 'react-dom/client';
 import { Button } from '../../components/button';
-import { clickEvent } from './hoge';
+import { clickEvent } from './features/hoge';
 
 kintone.events.on('app.record.index.show', () => {
   console.log('app1');
